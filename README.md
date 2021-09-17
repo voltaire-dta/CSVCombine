@@ -75,6 +75,8 @@ The simplest way to view the test results without the need for an IDE is through
 
 ![JUnit Output](/JUnit.png)
 
+IDE-specific support for running JUnit tests can be found [here](https://junit.org/junit5/docs/current/user-guide/#running-tests-ide)
+
 ## Final Thoughts / Reflections / Challenges
 
 Overall, I think this program does a fair job of accomplishing the required task. The use of an Object-Oriented language like Java allows for the creation of a class like CSVLine which allows the program to dyamically interpret files with various arrangements of the required headers. The updated Scanner class also allows for the easy progression through lines of a file using the nextLine() method. That said, Java specifically seems to be a bit antiquated when it comes to some of the processes of File I/O -- The PrintWriter class feels a bit obtuse / clunky to use, and also required manually crafting the CSV format through the use of a StringBuilder. 
