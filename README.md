@@ -44,7 +44,7 @@ Additionally, to ensure testing can be run from the command line, the JUnit Cons
 #### Compilation / Execution
 Ensure the files are compiled & .class files are created: 
 
-`javac javac CombineCSV.java CSVLine.java`
+`javac CombineCSV.java CSVLine.java`
 
 Using the file names as arguments, execute CombineCSV with the 'java' command: 
 
