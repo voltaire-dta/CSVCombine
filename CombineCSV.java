@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /*
  * @author Daniel Athey <daniel.t.athey@gmail.com>
- * @version last modified 9/16/21
+ * @version 1.0, last modified 9/16/21
  */
 
 public class CombineCSV {
@@ -104,9 +104,8 @@ public class CombineCSV {
 			} else if (heads[i].equals(PHONE_NUMBER)) {
 				currentLine.setPhone(curVal);
 			} else {
-				// System.out.println("An unrecognized field: " + heads[i] + " and it's value: "
-				// + curVal + " was encountered. Skipping since it is not included in the
-				// specified Schema.");
+				 System.out.println("An unrecognized field: " + heads[i] + " and it's value: "
+				 + curVal + " was encountered. Skipping since it is not included in the specified schema.");
 			}
 		}
 		// finally, print our newly sanitized & formatted line into merged, output file
