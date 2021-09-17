@@ -39,7 +39,12 @@ To run CSVCombine, we must be able to compile and run our code from the command 
 
 `sudo apt install openjdk-16-jdk-headless`
 
-Additionally, to ensure testing can be run from the command line, the JUnit Console Launcher standalone jar file should be downloaded. One has been included in this repository, but an executable junit-platform-console-standalone-1.8.0.jar with all dependencies included is also published in the Maven Central repository under the [junit-platform-console-standalone directory.](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/)
+Additionally, to ensure testing can be run from the command line, the JUnit Console Launcher standalone jar file should be downloaded. One has been included in this repository, but an executable junit-platform-console-standalone-1.8.0.jar is also published in the Maven Central repository under the [junit-platform-console-standalone directory.](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/)
+
+#### Retrieving The Project
+CSVCombine can be retrieved easily via HTTPS cloning with git. 
+
+`git clone https://github.com/voltaire-dta/CSVCombine.git`
 
 #### Compilation / Execution
 Ensure the files are compiled & .class files are created: 
