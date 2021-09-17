@@ -39,9 +39,25 @@ To run CSVCombine, we must be able to compile and run our code from the command 
 
 `sudo apt install openjdk-16-jdk-headless`
 
+Additionally, to ensure testing can be run from the command line, the JUnit Console Launcher standalone jar file should be downloaded. One has been included in this repository, but an executable junit-platform-console-standalone-1.8.0.jar with all dependencies included is also published in the Maven Central repository under the [junit-platform-console-standalone directory.](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/)
+
+#### Compilation / Execution
+Ensure the files are compiled & .class files are created: 
+
+`javac javac CombineCSV.java CSVLine.java`
+
+Using the file names as arguments, execute CombineCSV with the 'java' command: 
+
+`java CombineCSV file1.csv file2.csv filen.csv`
+
+#### Output 
+
+The merged CSV file will be output to the directory from which the program was run, named **output.csv**
+
 ## Examples
 
 ## Unit Tests / Logging
+#### Logging
 Many unit tests & system loggings are made available through the program. Error logging is printed to the terminal here for visibility when running the program. The following errors are reported to the terminal: 
 
 1. Missing File Arguments -- If no files are provided to the app as arguments
@@ -51,6 +67,13 @@ Many unit tests & system loggings are made available through the program. Error 
 5. Missing Fields -- If a file is missing one of the required fields. 
 
 Some general logging is also provided through the terminal, when the program is attempting to, or finishes reading a file. 
+
+#### Unit Test Execution 
+The simplest way to view the test results without the need for an IDE is through the JUnit Console Launcher. The Console Launcher can be run directly from the command line, and will print out results to the terminal. To ensure the Console Launcher runs smmoothly, __*ensure that the .jar file, as well as all the .class & .java for this project are under the same directory.*__ This eliminates the need for using relative paths, though the .jar file could be stored in a lib/ directory if desired. Run the following command from the directory under which the files are stored:  
+
+`java -jar junit-platform-console-standalone-1.8.0.jar -cp ./ --scan-class-path`
+
+![JUnit Output](/images/JUnit.png)
 
 ## Final Thoughts / Reflections / Challenges
 
