@@ -41,7 +41,23 @@ To run CSVCombine, we must be able to compile and run our code from the command 
 
 ## Examples
 
-## Unit Tests / Error Logging
+## Unit Tests / Logging
+Many unit tests & system loggings are made available through the program. Error logging is printed to the terminal here for visibility when running the program. The following errors are reported to the terminal: 
 
-## Final Thoughts / Reflections
+1. Missing File Arguments -- If no files are provided to the app as arguments
+2. File Not Found -- If a file doesn't exist or can't be located using the provided path
+3. Null Values -- If null values are provided for a field which cannot be null. 
+4. Non-Convertible value -- If a value provided for a field can't be properly parsed according to its type.
+5. Missing Fields -- If a file is missing one of the required fields. 
+
+Some general logging is also provided through the terminal, when the program is attempting to, or finishes reading a file. 
+
+## Final Thoughts / Reflections / Challenges
+
+Overall, I think this program does a fine job of accomplishing the required task. The use of an Object-Oriented language like Java allows for the creation of a class like CSVLine which allows the program to dyamically interpret files with various arrangements of the required headers. The updated Scanner class also allows for the easy progression through lines of a file. That said, Java specifically seems to be a bit antiquated when it comes to some of the processes of File I/O -- The PrintWriter class feels a bit obtuse / clunky to use, and also required manually crafting the CSV format through the use of a StringBuilder. 
+
+The (potentially) quoted nature of the CSV (and possible presence of embedded quotes) created some difficulties. Since the requirements of program necessitated that it be able to examine individual fields of individual rows, I had to separate out fields through the use of some regex which could account for embedded quotations. This part of the program feels particularly brittle to me, and I think another programming language such as Python might be better equipped to handle such an operation due to it's emphasis on processing large datasets, as well as it's extensive libraries/frameworks. 
+
+
+
 
