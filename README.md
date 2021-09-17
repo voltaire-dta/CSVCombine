@@ -33,11 +33,13 @@ The above process is conducted for each file, until complete. Error checking & t
 ## Setup / Usage
 
 #### Prerequisites / Dependencies
-To run CSVCombine, we must be able to compile and run our code from the command line. As such, a version of the JRE & JDK installed on one's unix or linux machine is required:
+To run CSVCombine, we should be able to compile and run our code from the command line. As such, a version of the JRE & JDK installed on one's unix or linux machine is needed:
 
 `sudo apt install openjdk-16-jre-headless`
 
 `sudo apt install openjdk-16-jdk-headless`
+
+**NOTE: The compiled .class files are included in the project folder, so compilation isn't strictly necessary to run the program**
 
 Additionally, to ensure testing can be run from the command line, the JUnit Console Launcher standalone jar file should be downloaded. One has been included in this repository, but an executable junit-platform-console-standalone-1.8.0.jar is also published in the Maven Central repository under the [junit-platform-console-standalone directory.](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/)
 
@@ -47,7 +49,7 @@ CSVCombine can be retrieved easily via HTTPS cloning with git.
 `git clone https://github.com/voltaire-dta/CSVCombine.git`
 
 #### Compilation / Execution
-Ensure the files are compiled & .class files are created: 
+(OPTIONAL) Ensure the files are compiled & .class files are created: 
 
 `javac CombineCSV.java CSVLine.java`
 
