@@ -57,6 +57,10 @@ Using the file names as arguments, execute CombineCSV with the 'java' command:
 
 `java CombineCSV file1.csv file2.csv filen.csv`
 
+Example files have been included in the **data/** subdirectory for testing purposes: 
+
+`java CombineCSV data/Homework_-_Auto_Insurance.csv data/Homework_-_Home_Insurance.csv`
+
 #### Output 
 
 The merged CSV file will be output to the directory from which the program was run, named **output.csv**
