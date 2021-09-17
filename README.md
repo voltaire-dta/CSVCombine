@@ -26,11 +26,22 @@ Specifically, CSVCombine reads file names as specified at the command line when 
 
 `java CombineCSV file1.csv file2.csv filen.csv`
 
+Files are read in one at a time through a Scanner Object, which then reads each record of a given file, and passes them to the parseLine() method for further processing. parseLine() acts as a sort of traffic controller, splitting the values of a given record (using the splitCsvLineToArray() method) into it's individual fields, and then sending those field values off to the correct sanitization method based on it's formatting/schema requirements. The sanitization methods in question are sanitizeNonNullableString() & sanitizeFloat(). If a field is successfully sanitized, it is then set as an instance variable of a CSVLine Object, which is a class dedicated to representing a record and it's data specifically for this program's CSV output. Once the CSVLine Object is created and all it's possible instance variables set, it leverages an internal method called isValidLine() as a final validation to ensure it meets the proper specifications for merging into the output file. Assuming the record is validated, it's toString() method is invoked as an argument to a PrintWriter Object's write() method, which physically writes the record to the output file. 
+
+The above process is conducted for each file, until complete. Error checking & testing is detailed in the **Unit Tests / Error Logging** section.  
 
 ## Setup / Usage
+
+#### Prerequisites / Dependencies
+To run CSVCombine, we must be able to compile and run our code from the command line. As such, a version of the JRE & JDK installed on one's unix or linux machine is required:
+
+`sudo apt install openjdk-16-jre-headless`
+
+`sudo apt install openjdk-16-jdk-headless`
 
 ## Examples
 
 ## Unit Tests / Error Logging
 
-## Final Thoughts 
+## Final Thoughts / Reflections
+
