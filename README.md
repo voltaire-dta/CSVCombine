@@ -78,9 +78,9 @@ Many unit tests & system loggings are made available through the program. Error 
 Some general logging is also provided through the terminal, when the program is attempting to, or finishes reading a file. 
 
 #### Unit Test Execution 
-The simplest way to view the test results without the need for an IDE is through the JUnit Console Launcher. The Console Launcher can be run directly from the command line, and will print out results to the terminal. To ensure the Console Launcher runs smmoothly, __*ensure that the .jar file, as well as all the .class & .java for this project are under the same directory.*__ This eliminates the need for using relative paths, though the .jar file could be stored in a lib/ directory if desired. Run the following command from the directory under which the files are stored:  
+The simplest way to view the test results without the need for an IDE is through the JUnit Console Launcher. The Console Launcher can be run directly from the command line, and will print out results to the terminal. To ensure the Console Launcher runs smmoothly, __*ensure that all the .class & .java files for this project are under the same directory.*__. Run the following command from the directory under which the files are stored (the project's root directory):  
 
-`java -jar junit-platform-console-standalone-1.8.0.jar -cp ./ --scan-class-path`
+`java -jar lib/junit-platform-console-standalone-1.8.0.jar -cp ./ --scan-class-path`
 
 ![JUnit Output](/images/JUnit.png)
 
