@@ -54,8 +54,6 @@ Using the file names as arguments, execute CombineCSV with the 'java' command:
 
 The merged CSV file will be output to the directory from which the program was run, named **output.csv**
 
-## Examples
-
 ## Unit Tests / Logging
 #### Logging
 Many unit tests & system loggings are made available through the program. Error logging is printed to the terminal here for visibility when running the program. The following errors are reported to the terminal: 
