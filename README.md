@@ -73,7 +73,7 @@ The simplest way to view the test results without the need for an IDE is through
 
 `java -jar junit-platform-console-standalone-1.8.0.jar -cp ./ --scan-class-path`
 
-![JUnit Output](/images/JUnit.png)
+![JUnit Output](/JUnit.png)
 
 ## Final Thoughts / Reflections / Challenges
 
